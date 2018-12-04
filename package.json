@@ -1,0 +1,22 @@
+{
+  "name": "aska",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon ./server.js --ignore config.json --ignore public/ --ignore src/ --ignore mobile/ --ignore data/",
+    "start": "concurrently \"npm run watch\" \"npm run build\" --names \"💻,📦\" --prefix name",
+    "assets": "webpack -w --display-max-modules 0",
+    "dev": "webpack-dev-server  --inline --hot --progress --colors --historyApiFallback",
+    "build": "webpack --watch --color"
+  },
+  "author": "Yaroslav Koval",
+  "license": "ISC",
+  "devDependencies": {
+    
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "ws": "^5.0.0"
+  }
+}
